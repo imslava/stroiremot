@@ -1,21 +1,21 @@
 {
-  "name": "start-gulp",
+  "name": "stroiremont",
   "version": "1.0.0",
-  "description": "Стартовый шаблон",
+  "description": "Стройремонт",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imslava/start-gulp.git"
+    "url": "git+https://github.com/imslava/stroiremont.git"
   },
   "author": "Slava Khripushin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/imslava/start-gulp/issues"
+    "url": "https://github.com/imslava/stroiremont/issues"
   },
-  "homepage": "https://github.com/imslava/start-gulp#readme",
+  "homepage": "https://github.com/imslava/stroiremont#readme",
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "crypto-random-string": "^3.3.0",
