@@ -51,4 +51,21 @@ $(document).ready(function(){
 		variableWidth: true
 	});
 
+	// var numb_slider = $('.slider').attr('data-slider'),
+  //   	sliders = { 
+  //   		numb_slider: {
+  //     		slider : '.slider'
+  //   		}
+  // 		};
+
+	// $.each(sliders, function() {
+	// 	$(this.slider).slick({
+	// 		slidesToShow: 1,
+	// 		slidesToScroll: 1,
+	// 		arrows: true,
+	// 		dots: true,
+	// 		fade: true
+	// 	});
+	// });
+
 });

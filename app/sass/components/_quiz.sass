@@ -1,0 +1,92 @@
+.quiz
+  padding-bottom: 80px
+  &-block
+    background: #f4f7fa
+    border-radius: 12px
+    padding: 50px 25px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 5px
+      left: 5px
+      right: 5px
+      bottom: -5px
+      border-radius: 12px
+      background: #C2CAD7
+      z-index: -1
+      opacity: 0.5
+  &-progress
+    height: 50px
+    max-width: 770px
+    width: 100%
+    margin: 40px auto 0
+    background: #ffffff
+    border-radius: 50px
+    position: relative
+    &__active
+      height: 50px
+      border-radius: 50px
+      background: $color-yellow
+    &__count
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      text-align: center
+      font-size: 18px
+      font-weight: 600
+      height: 21px
+      margin: auto 0
+  &-ask
+    @include flexbox
+    align-items: flex-start
+    justify-content: center
+    margin-top: 40px
+    position: relative
+    z-index: 10
+    h3
+      width: 100%
+      text-align: center
+      font-size: 24px
+      line-height: 1.3
+      font-weight: 300
+  &-item
+    width: 240px
+    margin: 27px 10px 0
+    cursor: pointer
+    input
+      @include visually-hidden
+      &:checked + span:before
+        background: $color-yellow
+        box-shadow: 0px 0px 12px #FFD45C
+    span
+      display: block
+      position: relative
+      padding-left: 22px
+      margin-top: 12px
+      &:before
+        content: ''
+        position: absolute
+        width: 12px
+        height: 12px
+        border-radius: 100%
+        border: 1px solid $color-yellow
+        background: #ffffff
+        display: block
+        left: 0
+        top: 2px
+        transition: .3s
+  &-img
+    width: 100%
+    border-radius: 6px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    height: 160px
+  &-man
+    position: absolute
+    left: -235px
+    bottom: -80px
+    z-index: 5
