@@ -1,0 +1,44 @@
+.price
+  padding: 75px 0 80px
+  &-row
+    @include flexbox
+    align-items: flex-start
+    margin: 20px -22px 0
+  &-item
+    width: calc(100% / 3 - 44px)
+    margin: 30px 22px 0
+    border-radius: 12px
+    border: 3px solid $color-black
+    padding: 0 20px 30px
+    text-align: center
+    box-shadow: 0px 32px 128px -16px rgba(0, 0, 0, 0.03)
+  &-title
+    font-size: 24px
+    font-weight: 300
+    height: 100px
+    @include flexbox
+    align-items: center
+    justify-content: center
+    border-bottom: 3px solid $color-black
+    margin-bottom: 40px
+  &-list
+    li
+      margin-bottom: 45px
+      p
+        color: $color-gray
+        margin-bottom: 5px
+      b
+        font-size: 24px
+        font-weight: 700
+  &-green
+    border: 3px solid #6FCF97
+    .price-title
+      border-bottom: 3px solid #6FCF97
+  &-yellow
+    border: 3px solid $color-yellow
+    .price-title
+      border-bottom: 3px solid $color-yellow
+  &-red
+    border: 3px solid #EB5757
+    .price-title
+      border-bottom: 3px solid #EB5757
