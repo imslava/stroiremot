@@ -68,4 +68,7 @@ $(document).ready(function(){
 	// 	});
 	// });
 
+	moment.locale('ru');
+	$('.js-date').html(moment().add('days', 14).format('D MMMM YYYY'));
+
 });

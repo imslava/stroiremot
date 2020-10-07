@@ -33,6 +33,8 @@ function scripts() {
 		'app/js/vendor/jquery.inputmask.min.js',
 		'app/js/vendor/jquery.validate.min.js',
 		'app/js/vendor/slick.min.js',
+		'app/js/vendor/moment.js',
+		'app/js/vendor/moment-with-locales.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('app.min.js'))
