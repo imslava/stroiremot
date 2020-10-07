@@ -137,25 +137,122 @@
     <div class="quiz-block">
       <h2 class="title">Получите за 1 минуту расчет стоимости ремонта<br> <span>в 3-х комплектациях</span></h2>
       <div class="quiz-progress">
-        <div class="quiz-progress__active" style="width: 15%"></div>
-        <div class="quiz-progress__count">1 / 6</div>
+        <div class="quiz-progress__active"></div>
+        <div class="quiz-progress__count"><span class="quiz-current"></span> / <span class="quiz-all"></span></div>
       </div>
-      <div class="quiz-ask">
+      <div class="quiz-ask" data-step="1">
         <h3>Где вы хотите сделать ремонт?</h3>
         <label class="quiz-item">
           <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
-          <input type="radio" name="quiz-1" /><span>Новостройка</span>
+          <input type="radio" name="quiz-1" value="Новостройка" checked /><span>Новостройка</span>
         </label>
         <label class="quiz-item">
           <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
-          <input type="radio" name="quiz-1" /><span>Вторичное жилье</span>
+          <input type="radio" name="quiz-1" value="Вторичное жилье" /><span>Вторичное жилье</span>
         </label>
         <label class="quiz-item">
           <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
-          <input type="radio" name="quiz-1" /><span>Офис</span>
+          <input type="radio" name="quiz-1" value="Офис" /><span>Офис</span>
         </label>
         <div class="w-100"></div>
         <a href="javascript:;" class="btn btn-quiz btn-next">Следующий вопрос</a>
+      </div>
+      <div class="quiz-ask" data-step="2">
+        <h3>Какая площадь у помещения?</h3>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-2" value="От 30 до 50 кв. м" /><span>От 30 до 50 кв. м</span>
+        </label>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-2" value="От 50 до 100 кв. м" /><span>От 50 до 100 кв. м</span>
+        </label>
+        <div class="w-100 w-100-quiz"></div>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-2" value="От 100 до 150 кв. м" /><span>От 100 до 150 кв. м</span>
+        </label>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-2" value="Более 150 кв. м" checked /><span>Более 150 кв. м</span>
+        </label>
+        <div class="w-100 w-100-quiz"></div>
+        <label class="quiz-item" style="width: inherit;">
+          <input type="radio" name="quiz-2" value="Я не знаю точных размеров. Нужен замер" /><span>Я не знаю точных размеров. Нужен замер</span>
+        </label>
+        <div class="w-100"></div>
+        <a href="javascript:;" class="btn btn-quiz btn-next">Следующий вопрос</a>
+      </div>
+      <div class="quiz-ask" data-step="3">
+        <h3>Какой дизайн вам нравится?</h3>
+        <label class="quiz-item">
+          <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
+          <input type="radio" name="quiz-3" checked /><span>Новостройка</span>
+        </label>
+        <label class="quiz-item">
+          <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
+          <input type="radio" name="quiz-3" /><span>Вторичное жилье</span>
+        </label>
+        <label class="quiz-item">
+          <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
+          <input type="radio" name="quiz-3" /><span>Офис</span>
+        </label>
+        <div class="w-100 w-100-quiz"></div>
+        <label class="quiz-item">
+          <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
+          <input type="radio" name="quiz-3" /><span>Новостройка</span>
+        </label>
+        <label class="quiz-item">
+          <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
+          <input type="radio" name="quiz-3" /><span>Вторичное жилье</span>
+        </label>
+        <label class="quiz-item">
+          <div class="quiz-img" style="background-image: url(img/promo.jpg);"></div>
+          <input type="radio" name="quiz-3" /><span>Офис</span>
+        </label>
+        <div class="w-100 w-100-quiz"></div>
+        <label class="quiz-item" style="width: inherit;">
+          <input type="radio" name="quiz-3" value="У меня есть дизайн-проект. Рассчитайте его" /><span>У меня есть дизайн-проект. Рассчитайте его</span>
+        </label>
+        <div class="w-100"></div>
+        <a href="javascript:;" class="btn btn-quiz btn-next">Следующий вопрос</a>
+      </div>
+      <div class="quiz-ask" data-step="4">
+        <h3>Нужна ли вам помощь с подбором материала?</h3>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-4" value="Нужен подбор чернового материала" /><span>Нужен подбор чернового материала</span>
+        </label>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-4" value="Нужен подбор чистового материала" /><span>Нужен подбор чистового материала</span>
+        </label>
+        <div class="w-100 w-100-quiz"></div>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-4" value="Нужен подбор всех материалов" checked /><span>Нужен подбор всех материалов</span>
+        </label>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-4" value="Подбор не нужен (все материалы уже есть)" /><span>Подбор не нужен (все материалы уже есть)</span>
+        </label>
+        <div class="w-100"></div>
+        <a href="javascript:;" class="btn btn-quiz btn-next">Следующий вопрос</a>
+      </div>
+      <div class="quiz-ask" data-step="5">
+        <h3>Куда Вам удобно получить смету?</h3>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-5" value="WhatsApp" checked /><span>WhatsApp</span>
+        </label>
+        <label class="quiz-item">
+          <input type="radio" name="quiz-5" value="СМС" /><span>СМС</span>
+        </label>
+        <div class="w-100 w-100-quiz"></div>
+        <label class="quiz-item" style="width: 500px;">
+          <input type="radio" name="quiz-5" value="БЕСПЛАТНАЯ консультация по телефону" /><span>БЕСПЛАТНАЯ консультация по телефону – хочу узнать подробнее об акциях, которые сейчас проходят</span>
+        </label>
+        <div class="w-100"></div>
+        <a href="javascript:;" class="btn btn-quiz btn-next">Следующий вопрос</a>
+      </div>
+      <div class="quiz-ask" data-step="6">
+        <h3>Введите номер, на который отправить смету</h3>
+        <h4>На этот номер мы вышлем вам смету выбранным вами способом и закрепим за номером дизайн-проект в подарок</h4>
+        <div class="w-100"></div>
+        <input type="tel" name="phone" class="input input-phone masked" placeholder="Ваш телефон" />
+        <div class="w-100"></div>
+        <a href="javascript:;" class="btn btn-quiz">Получить расчет</a>
       </div>
     </div>
   </div>

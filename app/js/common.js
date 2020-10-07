@@ -71,4 +71,38 @@ $(document).ready(function(){
 	moment.locale('ru');
 	$('.js-date').html(moment().add('days', 14).format('D MMMM YYYY'));
 
+	function survey() {
+    surveyToStep(1);
+	}
+
+	function surveyGetStep() {
+		return parseInt($(".quiz-ask.active").attr("data-step"));
+	}
+	function surveyGetSteps() {
+		return $(".quiz-ask").length;
+	}
+
+	function surveyToStep(id) {
+		var count = surveyGetSteps();
+		var $step = $('.quiz-ask[data-step="'+ id +'"]');
+		$(".quiz-ask").removeClass("active").hide();
+		$step.addClass("active").show();
+
+		$('.quiz-progress__active').css('width', (100/count) * id + '%');
+		$('.quiz-current').text(id);
+		$('.quiz-all').text(count);
+	}
+	// function surveyPrevStep() {
+	// 	surveyToStep(surveyGetStep() - 1);
+	// }
+	function surveyNextStep() {
+		surveyToStep(surveyGetStep() + 1);
+	}
+
+	survey();
+
+	$(".btn-next").click(function() {
+		surveyNextStep();
+	});
+
 });
