@@ -1,0 +1,77 @@
+.footer
+  background: #25252d
+  color: #ffffff
+  padding: 30px 0
+  .container
+    @include flexbox
+    align-items: flex-start
+    justify-content: space-between
+  &-logo
+    width: 185px
+    font-size: 12px
+    line-height: 1.4
+    p
+      margin: 10px 0 17px
+    a
+      color: #ffffff
+      border-bottom: 1px solid rgba(255,255,255,.2)
+  &-menu
+    @include flexbox
+    align-items: flex-start
+    font-size: 12px
+    line-height: 1.4
+    ul
+      width: 130px
+    li
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+      a
+        color: #ffffff
+        border-bottom: 1px solid rgba(255,255,255,.2)
+  &-info
+    font-size: 12px
+    line-height: 1.4
+    p
+      margin-bottom: 15px
+    a
+      color: #ffffff
+      border-bottom: 1px solid rgba(255,255,255,.2)
+  &-contact
+    // margin-left: auto
+    @include flexbox
+    align-items: center
+    width: 211px
+    &__phone
+      @include flexbox
+      align-items: center
+    &__icon
+      width: 45px
+      height: 45px
+      border: 1px solid rgba(255,255,255,.2)
+      border-radius: 6px
+      background: url(../img/svg/phone.svg) no-repeat center center
+      margin-right: 15px
+    &__text
+      a
+        font-weight: 700
+        font-size: 18px
+        color: #ffffff
+      p
+        font-size: 10px
+        margin-top: 6px
+    &__btn
+      width: 100%
+      margin-top: 15px
+      height: 45px
+      border: 1px solid rgba(255,255,255,.2)
+      border-radius: 6px
+      color: #ffffff
+      font-weight: 600
+      font-size: 14px
+      @include flexbox
+      align-items: center
+      justify-content: center
+      transition: .3s
+      &:hover
+        background: rgba(255,255,255,.1)
