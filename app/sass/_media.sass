@@ -1,21 +1,371 @@
 @include media(xl) // 1200
   .container
     max-width: 1024px
+  
+  .promo-left
+    width: 580px
+  .promo-content
+    align-items: center
+  .promo-content h1
+    font-size: 44px
+  .promo-best__item
+    margin-right: 15px
+  .promo-rating
+    width: 400px
+  
+  .choice-row
+    justify-content: space-around
+
+  .visit-form
+    margin-right: 0
+  .visit-text
+    width: 560px
+  .visit-rating
+    left: -225px
+
+  .team-right
+    padding-right: 0
+  
+  .warranty-list
+    width: 520px
+  .warranty-img
+    width: 460px
+  
+  .price-item
+    margin-left: 10px
+    margin-right: 10px
+    width: calc(100% / 3 - 20px)
+  .price-row
+    margin-left: -10px
+    margin-right: -10px
+  
+  .bethink-form
+    margin: 0 135px 0 0
 
 @include media(lg) // 1024
   .container
     max-width: 768px
+  
+  .promo-top
+    align-items: flex-start
+  .promo-contact__phone
+    margin-right: 0
+  .promo-contact
+    width: 211px
+  .promo-contact__btn
+    max-width: 100%
+    margin-top: 15px
+  .promo-content
+    padding-top: 70px
+  .promo-content h1
+    text-align: center
+  .promo-left,
+  .promo-right
+    width: 100%
+  .promo-gift
+    margin: 40px auto 0
+    text-align: center
+  .btn-promo
+    margin-left: auto
+    margin-right: auto
+  .promo-gift__img
+    right: -130px
+  .promo-rating
+    width: 470px
+    margin: 40px auto 0
+  .promo-best__item
+    margin-left: auto
+    &:last-child
+      margin-right: auto
+    margin-right: auto
+
+  .quiz, .choice
+    .title br
+      display: none
+
+  .visit-list
+    margin-left: 0
+  .visit-form
+    width: 360px
+    top: -130px
+  .visit-rating
+    top: 360px
+    left: -105px
+  
+  .team-left,
+  .team-right
+    width: 100%
+    padding: 0
+  .team-right
+    order: -1
+    margin-bottom: 30px
+  .team-right .title,
+  .office .title
+    text-align: center
+  
+  .warranty
+    padding-bottom: 50px
+  .warranty-list
+    width: 100%
+  .warranty-img
+    margin-right: auto
+    margin-top: 40px
+  
+  .price-item
+    width: calc(100% - 20px)
+
+  .bethink-form
+    margin-right: 0
+  .bethink-text
+    max-width: 100%
+    padding: 0
+    order: -1
+    margin-bottom: 40px
+  
+  .office-contact
+    position: relative
+    margin: 0 auto 35px
+  .office-row
+    margin-top: 30px
+  
+  .footer-menu
+    order: 1
+  .footer-info
+    order: 2
+  .footer-menu,
+  .footer-info
+    width: 50%
+    margin-top: 30px
+
+  .case-item
+    flex-wrap: wrap
+  .case-item__photo,
+  .case-item__text
+    width: 100%
+  .case-item__text
+    padding-left: 0
+  .case-item__photo-small
+    display: none
+  .case-item__bottom
+    position: initial
+    padding-top: 30px
+  .case-item__control
+    position: absolute
+    top: -85px
+    right: 20px
+
+  .w-100-quiz
+    display: none
 
 @include media(md) // 768
   .container
     max-width: 576px
+  
+  .promo-logo
+    width: 185px
+  .promo-logo p
+    padding: 0
+    margin-left: 0
+    margin-top: 15px
+    border-left: 0
+  
+  .promo-content h1
+    font-size: 36px
+  
+  .title
+    font-size: 28px
+    br
+      display: none
+  
+  .visit .title,
+  .visit h3
+    text-align: center
+    max-width: 100%
+  .visit-rating
+    display: none
+  .visit-form
+    width: 420px
+    top: 0
+    margin: 40px auto 0
+  .visit-list
+    top: 0
+    margin-top: 40px
+    max-width: 100%
+    &:before
+      display: none
+
+  .quiz-man
+    display: none
+  .quiz-fw
+    width: 100% !important
+  .quiz-item
+    width: calc(100% / 2 - 20px)
 
 @include media(sm) // 576
   .container
     max-width: 475px
+  
+  .promo-content h1
+    br
+      display: none
+  .promo-content
+    padding-top: 40px
+  
+  .promo-gift__img
+    position: relative
+    left: 0
+    right: 0
+    top: 0
+    margin: 0 auto
+  
+  .warranty-text
+    width: 100%
+    padding-left: 0
+    padding-top: 10px
+    text-align: center
+  .warranty-number
+    margin: 0 auto
+  .warranty-text h3
+    height: auto
+    justify-content: center
+  .warranty-item:before
+    display: none
+
+  .footer-info, .footer-menu
+    width: 100%
+    justify-content: center
+    text-align: center  
+
+  .quiz-progress
+    height: 35px
+    &__active
+      height: 35px
 
 @include media(xs) //475
   .container
     max-width: 100%
+  
+  .promo-logo,
+  .promo-contact
+    width: 100%
+    justify-content: center
+  .promo-logo
+    text-align: center
+    margin-bottom: 10px
+  .promo-contact__btn
+    display: none
+  .promo
+    padding-top: 15px
+    padding-bottom: 40px
+  .promo-content h1
+    font-size: 26px
+  .promo-gift__img
+    width: 200px
+  .promo-gift br
+    display: none
+  .promo-best__item
+    width: 100%
+    margin-top: 30px
+  .promo-best__icon
+    width: 32px
+    height: 32px
+    background-size: 100%
+  .promo-best__text
+    width: calc(100% - 40px)
+    margin-left: 8px
+  .promo-best__text h3
+    margin: 4px 0 15px
+  .promo-rating
+    display: none
 
-// @include media(xxs) // 375
+  .title
+    font-size: 22px
+  .choice-icon
+    left: 0
+    right: 0
+    top: -30px
+    margin: 0 auto
+  .choice-item
+    padding: 45px 20px 25px
+    text-align: center
+    br
+      display: none
+  
+  .form
+    padding: 30px 15px 20px
+    h4
+      font-size: 20px
+      margin-bottom: 10px
+    p
+      font-size: 14px
+  
+  .team-list
+    padding: 0 10px
+  .team-item b,
+  .warranty-text h3
+    font-size: 18px
+    br
+      display: none
+  .team-item
+    padding: 30px 10px 30px 30px
+  .team-item b:before
+    left: -30px
+  .team-info br
+    display: none
+
+  .footer-logo
+    width: 100%
+    justify-content: center
+    text-align: center
+    @include flexbox
+  .footer-logo p
+    max-width: 190px
+  .footer-menu ul
+    width: 100%
+    &:first-child
+      margin-bottom: 15px
+  .footer-contact
+    justify-content: center
+    margin: 30px auto 0
+
+  .case-item__photo-big-item
+    height: 320px
+  .case-item__text h3
+    font-size: 20px
+    br
+      display: none
+  .case-item__line-text
+    width: 100%
+    padding-left: 35px
+    margin-top: 5px
+
+  .bethink-text p,
+  .visit h3
+    font-size: 16px
+
+  .price-title
+    height: 80px
+    font-size: 20px
+  .price-row
+    margin-top: 0
+
+  .case
+    padding-top: 40px
+  .choice,
+  .visit,
+  .warranty,
+  .price,
+  .bethink,
+  .office,
+  .quiz
+    padding: 40px 0
+
+  .promo-gift h2
+    font-size: 19px
+
+  .quiz-item
+    width: 100%
+
+@include media(xxs) // 375
+  .case-item__photo-big-item
+    height: 260px
