@@ -109,4 +109,12 @@ $(document).ready(function(){
 		surveyNextStep();
 	});
 
+	$('[data-src="#popup-text"').fancybox({
+		touch: false,
+		beforeLoad: function(instance, slide){
+			var text = slide.opts.$orig.data('text');
+			$('#popup-text p').html(text);
+		}
+	});
+
 });
