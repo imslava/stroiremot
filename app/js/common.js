@@ -31,25 +31,29 @@ $(document).ready(function(){
 
 	scroll();
 
-	$('.case-item__photo-big').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: false,
-		fade: true,
-		asNavFor: '.case-item__photo-small'
-	});
+	function carousel($big, $small){
+		$($big).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			fade: true,
+			asNavFor: $small
+		});
+	
+		$($small).slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: $big,
+			dots: false,
+			arrows: false,
+			centerMode: false,
+			focusOnSelect: true,
+			variableWidth: true
+		});
+	}
 
-	$('.case-item__photo-small').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.case-item__photo-big',
-		dots: false,
-		arrows: false,
-		centerMode: false,
-		focusOnSelect: true,
-		variableWidth: true
-	});
+	carousel('#carousel-big-1', '#carousel-small-1');
 
 	// var numb_slider = $('.slider').attr('data-slider'),
   //   	sliders = { 
