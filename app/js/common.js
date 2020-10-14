@@ -11,12 +11,10 @@ $(document).ready(function(){
 		showMaskOnHover: false
 	});
 
-	$('.js-validate').validate({
-		rules: {
-			name: {required: true},
-			phone: {required: true}
-		}
-	});
+	$('.js-validate-1').validate({ rules: { name: {required: true}, phone: {required: true} } });
+	$('.js-validate-2').validate({ rules: { name: {required: true}, phone: {required: true} } });
+	$('.js-validate-3').validate({ rules: { name: {required: true}, phone: {required: true} } });
+	$('.js-validate-4').validate({ rules: { name: {required: true}, phone: {required: true} } });
 
 	function scroll() {
 		$(".js-scroll").on("click", function (event) {
