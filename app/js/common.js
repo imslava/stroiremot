@@ -15,6 +15,7 @@ $(document).ready(function(){
 	$('.js-validate-2').validate({ rules: { name: {required: true}, phone: {required: true} } });
 	$('.js-validate-3').validate({ rules: { name: {required: true}, phone: {required: true} } });
 	$('.js-validate-4').validate({ rules: { name: {required: true}, phone: {required: true} } });
+	$('.js-validate-5').validate({ rules: { phone: {required: true} } });
 
 	function scroll() {
 		$(".js-scroll").on("click", function (event) {

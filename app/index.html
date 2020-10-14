@@ -138,7 +138,7 @@
     <section class="quiz" id="quiz">
   <div class="container">
     <img src="img/quiz-man.png" class="quiz-man" alt="">
-    <div class="quiz-block">
+    <form action="php/quiz.php" method="post" class="quiz-block js-validate-5">
       <h2 class="title">Получите за 1 минуту расчет стоимости ремонта<br> <span>в 3-х комплектациях</span></h2>
       <div class="quiz-progress">
         <div class="quiz-progress__active"></div>
@@ -256,9 +256,9 @@
         <div class="w-100"></div>
         <input type="tel" name="phone" class="input input-phone masked" placeholder="Ваш телефон" />
         <div class="w-100"></div>
-        <a href="javascript:;" class="btn btn-quiz">Получить расчет</a>
+        <button stype="submit" class="btn btn-quiz">Получить расчет</button>
       </div>
-    </div>
+    </form>
   </div>
 </section>
     <section class="choice">
