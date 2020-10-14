@@ -1,4 +1,56 @@
-<section class="footer">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Стройремонт - Ремонт квартир, домов и офисов в Москве c 2010 года</title>
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+<body>
+  
+  <div class="wrapper">
+
+    <section class="thanks">
+      <div class="thanks-top">
+        <div class="container">
+          <div class="promo-top">
+            <div class="promo-logo">
+              <a href="/"><img src="img/svg/logo.svg" alt=""></a>
+              <p>ремонт квартир, домов и офисов<br> в Москве c 2010 года</p>
+            </div>
+            <div class="promo-contact">
+              <div class="promo-contact__phone">
+                <div class="promo-contact__icon"></div>
+                <div class="promo-contact__text">
+                  <a href="tel:+7 (913) 760-01-45">+7 (913) 760-01-45</a>
+                  <p>ЕЖЕДНЕВНО, КРУГЛОСУТОЧНО</p>
+                </div>
+              </div>
+              <a href="javascript:;" data-fancybox data-src="#popup-call" class="promo-contact__btn">Перезвоните мне</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thanks-content">
+        <div class="container">
+          <h1>Успешно! Спасибо за оказанное доверие!</h1>
+          <h2>Смета будет отправлена в течении 24 часов выбранным способом на номер <span class="paramPhone"></span></h2>
+          <h3>Если вы ошиблись при вводе номера, исправьте пожалуйста.</h3>
+          <div class="thanks-form">
+            <input type="tel" name="phone" class="masked" />
+            <button type="submit" class="btn btn-thanks">Да, это мой номер</button>
+            <b>Номер подтвёржден!</b>
+          </div>
+          <h4>Также, пожалуйста, обратите внимание, что если у сметчика будут вопросы,<br> он может позвонить вам для уточнения. Благодарим за понимание! </h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
   <div class="container">
     <div class="footer-logo">
       <a href="/"><img src="img/svg/logo.svg" alt=""></a>
@@ -56,3 +108,22 @@
   <p>5. Изменения и обновления. Текст политики конфиденциальности может быть обновлён или изменён без уведомления об этом зарегистрированных пользователей. Актуальная версия текста находится на данной странице.</p>
   <p>6. Согласие с политикой конфиденциальности. Регистрируясь на данном сайте, пользователь автоматически соглашается с политикой обработки данных.</p>
 </div>
+
+  </div>
+  
+  <script src="js/app.min.js"></script>
+  <script>
+    let params = (new URL(document.location)).searchParams;
+    $('.paramPhone').text(params.get('phone'));
+    $('[name=phone]').val(params.get('phone'));
+
+    $('.btn-thanks').click(function(){
+      $('.thanks-form b').css('opacity', '1');
+      function hideText(){
+        $('.thanks-form b').css('opacity', '0');
+      }
+      setTimeout(hideText, 3000);
+    });
+  </script>
+</body>
+</html>

@@ -30,7 +30,7 @@
 
         $mail->send();
 
-        header("Location: ../thanks.html");
+        header("Location: ../thanks.html?name=".$name."&phone=".$phone);
 
     } catch (Exception $e) {
         echo "Сообщение не может быть отправлено. Ошибка отправки: {$mail->ErrorInfo}";
