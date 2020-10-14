@@ -41,6 +41,11 @@
   
   .bethink-form
     margin: 0 135px 0 0
+  
+  .case-item__photo
+    width: 460px
+  .case-item__text
+    width: 534px
 
 @include media(lg) // 1024
   .container
@@ -139,13 +144,8 @@
 
   .case-item
     flex-wrap: wrap
-  .case-item__photo,
-  .case-item__text
-    width: 100%
   .case-item__text
     padding-left: 0
-  .case-item__photo-small
-    display: none
   .case-item__bottom
     position: initial
     padding-top: 30px
@@ -154,7 +154,8 @@
     top: -85px
     right: 20px
 
-  .w-100-quiz
+  .w-100-quiz,
+  .fotorama__nav-wrap
     display: none
 
 @include media(md) // 768
@@ -338,8 +339,6 @@
     justify-content: center
     margin: 30px auto 0
 
-  .case-item__photo-big-item
-    height: 320px
   .case-item__text h3
     font-size: 20px
     br
@@ -381,7 +380,3 @@
       width: 100%
       img
         margin: 0 auto
-        
-@include media(xxs) // 375
-  .case-item__photo-big-item
-    height: 260px

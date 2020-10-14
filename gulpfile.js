@@ -35,6 +35,7 @@ function scripts() {
 		'app/js/vendor/slick.min.js',
 		'app/js/vendor/moment.js',
 		'app/js/vendor/moment-with-locales.js',
+		'app/js/vendor/fotorama.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('app.min.js'))

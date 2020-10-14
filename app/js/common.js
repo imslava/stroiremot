@@ -30,46 +30,22 @@ $(document).ready(function(){
 
 	scroll();
 
-	function carousel($big, $small){
-		$($big).slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			dots: false,
-			fade: true,
-			asNavFor: $small
-		});
-	
-		$($small).slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			asNavFor: $big,
-			dots: false,
-			arrows: false,
-			centerMode: false,
-			focusOnSelect: true,
-			variableWidth: true
-		});
-	}
+	$('.case-carousel').slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		centerMode: false,
+		variableWidth: true
+	});
 
-	carousel('#carousel-big-1', '#carousel-small-1');
-
-	// var numb_slider = $('.slider').attr('data-slider'),
-  //   	sliders = { 
-  //   		numb_slider: {
-  //     		slider : '.slider'
-  //   		}
-  // 		};
-
-	// $.each(sliders, function() {
-	// 	$(this.slider).slick({
-	// 		slidesToShow: 1,
-	// 		slidesToScroll: 1,
-	// 		arrows: true,
-	// 		dots: true,
-	// 		fade: true
-	// 	});
-	// });
+	$('.case-prev').click(function() {
+    $('.case-carousel').slick('prev');
+  });
+  $('.case-next').click(function() {
+    $('.case-carousel').slick('next');
+  });
 
 	moment.locale('ru');
 	$('.js-date').html(moment().add('days', 14).format('D MMMM YYYY'));
@@ -115,5 +91,24 @@ $(document).ready(function(){
 			$('#popup-text p').html(text);
 		}
 	});
+
+	if($(window).width() > 475){
+		var height = 460;
+	}else if($(window).width() < 475 && $(window).width() > 375){
+		var height = 320;
+	}else if($(window).width() < 375){
+		var height = 260;
+	}
+
+	$('.fotorama').fotorama({
+		nav: 'thumbs',
+		fit: 'cover',
+		height: height,
+		thumbheight: 90
+	});
+
+	if($(window).width() < 1024){
+		$('.case-item, .case-item__photo, .case-item__text').css('width', $('.container').width());
+	}
 
 });
