@@ -10,12 +10,16 @@
     margin-top: 10px
   &-carousel
     margin-top: 40px
-    & > .slick-list
+    .slick-list
       overflow: initial
+    .slick-active .case-item
+      opacity: 1
   // item
   &-item
     display: flex !important
     margin-right: 40px
+    opacity: .3
+    transition: .5s
     &__photo
       width: 515px
       &-big
